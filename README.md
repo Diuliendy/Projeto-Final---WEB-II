@@ -8,19 +8,20 @@ pf/
 │   ├── controllers/
 │   │   └── view.py
 │   ├── models/
-|   |    └── alunos.py
-|   ├── static/
-|   |    ├── css/
-|   |         └── style.css 
+│   │   └── alunos.py
+│   ├── static/
+│   │   ├── css/
+│   │   │   └── style.css
 │   ├── templates/
-|   |    ├── index.html
-|   |    ├── cadastro.html
-|   |    ├── editar.html
-│   │    └── listar.html
-|   ├──instance
-|   |  └──alunos.db
+│   │   ├── index.html
+│   │   ├── cadastro.html
+│   │   ├── editar.html
+│   │   └── listar.html
+│   ├── instance/
+│   │   └── alunos.db
 │── run.py
 │── README.md
+
 
 - ### Funcionalidades:
 * Edição de dados
