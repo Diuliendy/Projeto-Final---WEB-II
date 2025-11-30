@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>Lista de Alunos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<body>
+    <div id="container-listar">
+    <h1>Alunos Cadastrados</h1>
+    <p><a href="/cadastro">Cadastrar novo</a> | <a href="/">Início</a></p>
+    </div>
+    <div class="table-wrap">
+    <table id="tabela-listar" border="1" cellpadding="6" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Email</th>
+                <th>Turma</th>
+                <th>Matrícula</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for aluno in alunos %}
+            <tr>
+                <td>{{ aluno.id }}</td>
+                <td>{{ aluno.nome }}</td>
+                <td>{{ aluno.idade or '' }}</td>
+                <td>{{ aluno.email }}</td>
+                <td>{{ aluno.turma }}</td>
+                <td>{{ aluno.matricula }}</td>
+                <td>
+                    <a href="/editar/{{ aluno.id }}">Editar</a> |
+                    <a href="/deletar/{{ aluno.id }}" onclick="return confirm('Deseja excluir este aluno?')">Excluir</a>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="7">Nenhum aluno encontrado.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>

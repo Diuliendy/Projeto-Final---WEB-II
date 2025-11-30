@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>Editar Aluno</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' )}}">
+</head>
+<body>
+     {% if erro %}
+ <script>
+     alert("{{ erro }}");
+  </script>
+{% endif %}
+    <div class="dois">
+    <h1>Editar Aluno</h1>
+    <form method="POST" action="/editar/{{ aluno.id }}">
+        <label>Nome:<br><input type="text" name="nome" value="{{ aluno.nome }}" required></label><br><br>
+        <label>Idade:<br><input type="number" name="idade" value="{{ aluno.idade }}"></label><br><br>
+        <label>Email:<br><input type="email" name="email" value="{{ aluno.email }}" required></label><br><br>
+        <label>Turma:<br><input type="text" name="turma" value="{{ aluno.turma }}"></label><br><br>
+        <label>Matrícula:<br><input type="text" name="matricula" value="{{ aluno.matricula }}"></label><br><br>
+        <button type="submit">Salvar</button>
+        </div>
+    </form>
+    <p><a href="/alunos">Voltar</a></p>
+</body>
+</html>

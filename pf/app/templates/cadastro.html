@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>Cadastrar Aluno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+      {% if erro %}
+   <script>
+    alert("{{ erro }}");
+   </script>
+     {% endif %}
+    <div class="dois">
+    <h1>Cadastrar Aluno</h1>
+    <form method="POST" action="/cadastro">
+        <label>Nome:<br><input type="text" name="nome" required></label><br><br>
+        <label>Idade:<br><input type="number" name="idade"></label><br><br>
+        <label>Email:<br><input type="email" name="email" required></label><br><br>
+        <label>Turma:<br><input type="text" name="turma"></label><br><br>
+        <label>Matrícula:<br><input type="text" name="matricula"></label><br><br>
+        <button type="submit">Salvar</button>
+    </form>
+    </div>
+    <p><a href="/alunos">Voltar para lista</a></p>
+</body>
+</html>
