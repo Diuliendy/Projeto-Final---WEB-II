@@ -3,6 +3,7 @@
 ---
 O sistema de cadastramento criado foi projetado no modelo CRUD e utilizando o framework Flask.Seu propósito é organizar e facilitar o acesso de fórma rápida e fácil aos dados cadastrados pelo usuário.
 - ### Estrutura de pastas:
+```
 pf/
 │── app/
 │   ├── controllers/
@@ -21,7 +22,7 @@ pf/
 │   │   └── alunos.db
 │── run.py
 │── README.md
-
+```
 
 - ### Funcionalidades:
 * Edição de dados
